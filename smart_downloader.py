@@ -73,7 +73,7 @@ class SmartDownloader:
             self.logger.info("Analyzing target server: {}".format(url))
             
             # 服务器检测
-            server_info = self.server_detector.detect_server_type(url)
+            server_info = self.server_detector.analyze_server(url)
             
             # 页面分析
             page_info = self.page_analyzer.analyze_structure(url)
@@ -84,12 +84,12 @@ class SmartDownloader:
             result = {
                 'success': True,
                 'url': url,
-                'server_type': server_info.get('server_type', 'unknown'),
+                'server_type': server_info.server_type,
                 'page_structure': page_info.get('structure_type', 'unknown'),
                 'estimated_files': estimated_files,
-                'estimated_size': server_info.get('estimated_size', 0),
-                'response_time': server_info.get('response_time', 0),
-                'supports_range': server_info.get('supports_range', False)
+                'estimated_size': server_info.estimated_size,
+                'response_time': server_info.response_time,
+                'supports_range': server_info.supports_range
             }
             
             self.logger.info("Server analysis: {}".format(url))
@@ -120,7 +120,7 @@ class SmartDownloader:
             return {'success': False, 'error': 'Invalid URL'}
         
         # 确保输出目录存在
-        FileUtils.ensure_dir(output_dir)
+        FileUtils.create_directory(output_dir)
         
         try:
             # 第一阶段：分析服务器
