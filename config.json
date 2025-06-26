@@ -1,0 +1,45 @@
+{
+    "download": {
+        "max_threads": 5,
+        "timeout": 30,
+        "retry_attempts": 3,
+        "user_agent": "SmartDownloader/1.0",
+        "preserve_structure": true,
+        "overwrite_existing": false,
+        "max_file_size": 1073741824,
+        "exclude_extensions": [],
+        "include_patterns": [],
+        "exclude_patterns": [],
+        "max_workers": 8
+    },
+    "strategies": {
+        "wget_priority": 1,
+        "python_priority": 2,
+        "hybrid_priority": 3
+    },
+    "filters": {
+        "exclude_extensions": [
+            ".tmp",
+            ".log",
+            ".cache"
+        ],
+        "max_file_size": "1GB",
+        "skip_hidden_files": true,
+        "skip_system_files": true
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "smart_downloader.log",
+        "max_size": "10MB",
+        "backup_count": 5,
+        "console_output": true
+    },
+    "system": {
+        "cpu_cores": 16,
+        "auto_generated": true,
+        "version": "1.0.0"
+    },
+    "network": {
+        "connection_pool_size": 32
+    }
+}

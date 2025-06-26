@@ -1,0 +1,28 @@
+2025-06-26 22:30:53 - SmartDownloader - INFO - Phase 1: Analyzing target server...
+2025-06-26 22:30:53 - SmartDownloader - INFO - Analyzing target server: http://10.20.33.88:8888/
+2025-06-26 22:31:58 - SmartDownloader - INFO - Analyzing target server: http://httpbin.org/
+2025-06-26 22:32:12 - SmartDownloader - ERROR - Analysis failed: 'PageAnalyzer' object has no attribute 'analyze_structure'
+2025-06-26 22:33:12 - SmartDownloader - INFO - Analyzing target server: http://httpbin.org/
+2025-06-26 22:33:35 - SmartDownloader - INFO - Server analysis: http://httpbin.org/
+2025-06-26 22:33:35 - SmartDownloader - INFO - Server type: unknown
+2025-06-26 22:33:35 - SmartDownloader - INFO - Page structure: simple_listing
+2025-06-26 22:33:35 - SmartDownloader - INFO - Estimated files: 1
+2025-06-26 22:37:07 - SmartDownloader - INFO - Phase 1: Analyzing target server...
+2025-06-26 22:37:07 - SmartDownloader - INFO - Analyzing target server: http://httpbin.org/
+2025-06-26 22:37:41 - SmartDownloader - INFO - Server analysis: http://httpbin.org/
+2025-06-26 22:37:41 - SmartDownloader - INFO - Server type: unknown
+2025-06-26 22:37:41 - SmartDownloader - INFO - Page structure: simple_listing
+2025-06-26 22:37:41 - SmartDownloader - INFO - Estimated files: 1
+2025-06-26 22:37:41 - SmartDownloader - INFO - Phase 2: Selecting download strategy...
+2025-06-26 22:37:41 - SmartDownloader - ERROR - Download error: 'PythonDownloader' object has no attribute 'is_available'
+2025-06-26 22:38:53 - SmartDownloader - INFO - Phase 1: Analyzing target server...
+2025-06-26 22:38:53 - SmartDownloader - INFO - Analyzing target server: http://httpbin.org/
+2025-06-26 22:39:00 - SmartDownloader - INFO - Server analysis: http://httpbin.org/
+2025-06-26 22:39:00 - SmartDownloader - INFO - Server type: unknown
+2025-06-26 22:39:00 - SmartDownloader - INFO - Page structure: simple_listing
+2025-06-26 22:39:00 - SmartDownloader - INFO - Estimated files: 1
+2025-06-26 22:39:00 - SmartDownloader - INFO - Phase 2: Selecting download strategy...
+2025-06-26 22:39:00 - SmartDownloader - INFO - Strategy selected for http://httpbin.org/: python - Based on server analysis
+2025-06-26 22:39:00 - SmartDownloader - INFO - Phase 3: Executing download...
+2025-06-26 22:39:01 - SmartDownloader - INFO - Download completed successfully: http://httpbin.org/
+2025-06-26 22:39:49 - SmartDownloader - INFO - Analyzing target server: http://10.20.33.88:8888/
