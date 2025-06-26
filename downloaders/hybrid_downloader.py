@@ -87,7 +87,7 @@ class HybridDownloader(BaseDownloader):
             
             # Score wget strategy
             wget_score = 0
-            if WgetDownloader.is_available():
+            if self.wget_downloader.is_available():
                 wget_score += 50  # Base score for availability
                 
                 # Wget is excellent for standard web servers
@@ -138,7 +138,7 @@ class HybridDownloader(BaseDownloader):
         if isinstance(primary_strategy, WgetDownloader):
             return self.python_downloader
         elif isinstance(primary_strategy, PythonDownloader):
-            if WgetDownloader.is_available():
+            if self.wget_downloader.is_available():
                 return self.wget_downloader
         return None
     

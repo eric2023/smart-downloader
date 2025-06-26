@@ -76,16 +76,16 @@ class SmartDownloader:
             server_info = self.server_detector.analyze_server(url)
             
             # 页面分析
-            page_info = self.page_analyzer.analyze_structure(url)
+            page_info = self.page_analyzer.analyze_page(url)
             
             # 估算文件数量
-            estimated_files = len(page_info.get('links', []))
+            estimated_files = page_info.get('total_links', 0)
             
             result = {
                 'success': True,
                 'url': url,
                 'server_type': server_info.server_type,
-                'page_structure': page_info.get('structure_type', 'unknown'),
+                'page_structure': page_info.get('structure', 'unknown'),
                 'estimated_files': estimated_files,
                 'estimated_size': server_info.estimated_size,
                 'response_time': server_info.response_time,

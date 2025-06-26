@@ -188,8 +188,7 @@ class WgetDownloader(BaseDownloader):
             except subprocess.TimeoutExpired:
                 self.process.kill()
     
-    @staticmethod
-    def is_available() -> bool:
+    def is_available(self) -> bool:
         """Check if wget is available on the system."""
         try:
             result = subprocess.run(['wget', '--version'], 

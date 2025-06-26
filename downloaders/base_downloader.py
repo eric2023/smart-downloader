@@ -83,6 +83,24 @@ class BaseDownloader(ABC):
         """Cancel the current download operation."""
         self.is_cancelled = True
     
+    def is_available(self) -> bool:
+        """
+        Check if this downloader is available/functional.
+        
+        Returns:
+            True if this downloader can be used
+        """
+        return True  # Default implementation - always available
+    
+    def get_name(self) -> str:
+        """
+        Get the name of this downloader.
+        
+        Returns:
+            Name of the downloader
+        """
+        return self.__class__.__name__.replace('Downloader', '').lower()
+    
     def _should_download_file(self, filename: str, file_url: str) -> bool:
         """
         Check if a file should be downloaded based on filters.
